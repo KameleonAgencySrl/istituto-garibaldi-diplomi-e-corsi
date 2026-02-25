@@ -51,6 +51,7 @@ import Home from './pages/Home';
 import Servizi from './pages/Servizi';
 import Realizzazioni from './pages/Realizzazioni';
 import ChiSiamo from './pages/ChiSiamo';
+import Contatti from './pages/Contatti';
 import __Layout from './Layout.jsx';
 
 
@@ -59,6 +60,7 @@ export const PAGES = {
     "Servizi": Servizi,
     "Realizzazioni": Realizzazioni,
     "ChiSiamo": ChiSiamo,
+    "Contatti": Contatti,
 }
 
 export const pagesConfig = {
