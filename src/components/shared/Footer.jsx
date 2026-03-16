@@ -33,6 +33,7 @@ const locations = [
 const navLinks = [
   { name: 'Home', page: 'Home' },
   { name: 'Corsi per Diploma', page: 'Servizi' },
+  { name: 'Servizi Aggiuntivi', page: 'ServiziAggiuntivi' },
   { name: 'Realizzazioni', page: 'Realizzazioni' },
   { name: 'Chi Siamo', page: 'ChiSiamo' },
   { name: 'Contatti', page: 'Contatti' },

@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navItems = [
   { name: 'Home', page: 'Home' },
   { name: 'Corsi', page: 'Servizi' },
+  { name: 'Servizi Aggiuntivi', page: 'ServiziAggiuntivi' },
   { name: 'Realizzazioni', page: 'Realizzazioni' },
   { name: 'Chi Siamo', page: 'ChiSiamo' },
   { name: 'Contatti', page: 'Contatti' },
