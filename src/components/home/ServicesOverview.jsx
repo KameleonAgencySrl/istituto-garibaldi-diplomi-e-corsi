@@ -152,19 +152,29 @@ export default function ServicesOverview() {
               <p className="text-blue-100 mb-6">
                 Oltre ai corsi di diploma, offriamo servizi di supporto per ogni esigenza formativa.
               </p>
-              <ul className="space-y-3">
+              <div className="grid sm:grid-cols-2 gap-3">
                 {[
-                  "Doposcuola per studenti DSA e BES",
-                  "Corsi per la preparazione agli esami universitari",
-                  "Corsi di lingue e contabilità",
-                  "Corsi di italiano per stranieri"
+                  { title: "Doposcuola per studenti BES-DSA", id: "doposcuola" },
+                  { title: "Corsi per la preparazione agli esami universitari", id: "esami-universitari" },
+                  { title: "Corsi di lingue e contabilità", id: "lingue-contabilita" },
+                  { title: "Corsi di italiano per stranieri", id: "italiano-stranieri" }
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white">
-                    <span className="w-2 h-2 bg-[#d4a853] rounded-full" />
-                    {item}
-                  </li>
+                  <Link 
+                    key={i} 
+                    to={createPageUrl('ServiziAggiuntivi')}
+                    className="group"
+                  >
+                    <div className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40 rounded-xl p-4 transition-all duration-300 h-full">
+                      <div className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#d4a853] rounded-full mt-1.5 flex-shrink-0" />
+                        <span className="text-white text-sm font-medium leading-snug group-hover:translate-x-0.5 transition-transform">
+                          {item.title}
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
                 ))}
-              </ul>
+              </div>
             </div>
             <div className="relative">
               <img 
