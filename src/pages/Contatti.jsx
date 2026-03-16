@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { MapPin, Phone, Mail, Clock, CheckCircle, Send, MessageSquare } from 'lucide-react';
+import LocationsMap from '@/components/shared/LocationsMap';
 import { toast } from 'sonner';
 
 const locations = [
@@ -408,14 +409,14 @@ export default function Contatti() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-[400px] bg-slate-200 relative">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <MapPin className="w-12 h-12 text-slate-400 mx-auto mb-4" />
-            <p className="text-slate-600">Mappa interattiva delle sedi</p>
-            <p className="text-sm text-slate-500">CONTENT REQUIRED FROM CLIENT: Coordinate esatte per integrazione mappa</p>
+      {/* Interactive Map */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Le nostre sedi</h2>
+            <p className="text-slate-500">Clicca su una sede per visualizzarla sulla mappa</p>
           </div>
+          <LocationsMap />
         </div>
       </section>
     </main>
