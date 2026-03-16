@@ -51,9 +51,9 @@ export default function QualificationSection() {
               <h3 className="text-xl font-semibold text-white">Ideale per</h3>
             </div>
             
-            <ul className="space-y-4">
+            <ul className="space-y-4 max-w-md mx-auto">
               {idealFor.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+                <li key={index} className="flex items-start gap-3 justify-center">
                   <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-300">{item}</span>
                 </li>
