@@ -1,94 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Quote, Shield, Award, FileCheck } from 'lucide-react';
+import { Shield, Award, FileCheck } from 'lucide-react';
 
 export default function TrustSection() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://elfsightcdn.com/platform.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Testimonials */}
+          {/* Google Reviews Widget */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6"
           >
-            {/* Review 1 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
-                  M
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-900">Margherita Bonizzoni</p>
-                  <div className="flex items-center gap-2">
-                    <span className="text-yellow-400 text-sm">★★★★★</span>
-                    <span className="text-xs text-slate-500">8 anni fa</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-slate-700 leading-relaxed">
-                Insegnanti preparati, competenti e disponibili a valorizzare le inclinazioni personali di ogni studente. Un ambiente familiare, accogliente e sempre pronto all'ascolto ❤️
-              </p>
-            </div>
-
-            {/* Review 2 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
-                  N
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-900">Nicol Zaza</p>
-                  <div className="flex items-center gap-2">
-                    <span className="text-yellow-400 text-sm">★★★★★</span>
-                    <span className="text-xs text-slate-500">2 mesi fa</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-slate-700 leading-relaxed">
-                frequento l'istituto giuseppe garibaldi e mi trovo molto bene con gli insegnati e il personale scolastico ve la consiglio!!!
-              </p>
-            </div>
-
-            {/* Review 3 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
-                  A
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-900">Andresa Macchi</p>
-                  <div className="flex items-center gap-2">
-                    <span className="text-yellow-400 text-sm">★★★★★</span>
-                    <span className="text-xs text-slate-500">2 mesi fa</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-slate-700 leading-relaxed">
-                scuola favolosa, personale e docenti professionali e simpatici. consiglio vivamente!
-              </p>
-            </div>
-
-            {/* Review 4 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
-                  N
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-900">Nicola Boscolo</p>
-                  <div className="flex items-center gap-2">
-                    <span className="text-yellow-400 text-sm">★★★★★</span>
-                    <span className="text-xs text-slate-500">2 mesi fa</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-slate-700 leading-relaxed">
-                I recommend it to you.....I'm very happy with it 💯 🔥
-              </p>
-            </div>
+            <div className="elfsight-app-c3b4c00c-dd9f-4e1e-81cf-9e6698b0c1e6" data-elfsight-app-lazy></div>
           </motion.div>
 
           {/* Certifications */}
