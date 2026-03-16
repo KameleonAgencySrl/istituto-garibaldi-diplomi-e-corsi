@@ -7,32 +7,87 @@ export default function TrustSection() {
     <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Testimonial */}
+          {/* Testimonials */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative"
+            className="space-y-6"
           >
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#d4a853]/10 rounded-full" />
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#1e3a5f]/5 rounded-full" />
-            
-            <div className="relative bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-100">
-              <Quote className="w-12 h-12 text-[#d4a853] mb-6" />
-              
-              <blockquote className="text-xl lg:text-2xl text-slate-700 leading-relaxed mb-8 font-light italic">
-                "L'Istituto fornisce un valido supporto al fine di ottenere un'ottima preparazione culturale e professionale, in particolare modo a coloro che hanno difficoltà nell'inserimento in un contesto di gruppo."
-              </blockquote>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold text-lg">
-                  IG
+            {/* Review 1 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
+                  M
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">Istituto Garibaldi</p>
-                  <p className="text-sm text-slate-500">35 anni di esperienza</p>
+                  <p className="font-semibold text-slate-900">Margherita Bonizzoni</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400 text-sm">★★★★★</span>
+                    <span className="text-xs text-slate-500">8 anni fa</span>
+                  </div>
                 </div>
               </div>
+              <p className="text-slate-700 leading-relaxed">
+                Insegnanti preparati, competenti e disponibili a valorizzare le inclinazioni personali di ogni studente. Un ambiente familiare, accogliente e sempre pronto all'ascolto ❤️
+              </p>
+            </div>
+
+            {/* Review 2 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
+                  N
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Nicol Zaza</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400 text-sm">★★★★★</span>
+                    <span className="text-xs text-slate-500">2 mesi fa</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-slate-700 leading-relaxed">
+                frequento l'istituto giuseppe garibaldi e mi trovo molto bene con gli insegnati e il personale scolastico ve la consiglio!!!
+              </p>
+            </div>
+
+            {/* Review 3 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
+                  A
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Andresa Macchi</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400 text-sm">★★★★★</span>
+                    <span className="text-xs text-slate-500">2 mesi fa</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-slate-700 leading-relaxed">
+                scuola favolosa, personale e docenti professionali e simpatici. consiglio vivamente!
+              </p>
+            </div>
+
+            {/* Review 4 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center text-white font-bold">
+                  N
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Nicola Boscolo</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400 text-sm">★★★★★</span>
+                    <span className="text-xs text-slate-500">2 mesi fa</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-slate-700 leading-relaxed">
+                I recommend it to you.....I'm very happy with it 💯 🔥
+              </p>
             </div>
           </motion.div>
 
