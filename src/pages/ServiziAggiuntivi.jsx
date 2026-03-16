@@ -10,21 +10,21 @@ const services = [
     id: "doposcuola",
     icon: Users,
     title: "Doposcuola per studenti BES-DSA",
-    description: "Supporto fondamentale per garantire che ogni studente abbia le risorse e gli strumenti per sviluppare al meglio le proprie capacità, affrontando le difficoltà in modo personalizzato e mirato.",
+    description: "Supporto fondamentale per garantire che ogni studente abbia le risorse gli strumenti per sviluppare al meglio le proprie capacità, affrontando le difficoltà in modo personalizzato e mirato.",
     color: "from-blue-500 to-blue-600"
   },
   {
     id: "esami-universitari",
     icon: GraduationCap,
     title: "Corsi per la preparazione agli esami universitari",
-    description: "Supporto strutturato e mirato con l'obiettivo di massimizzare le possibilità di successo degli studenti negli esami d'ingresso e nell'affrontare i vari esami annuali. Questi corsi sono una risorsa preziosa per chi ha bisogno di un supporto aggiuntivo per entrare nel mondo accademico.",
+    description: "Supporto strutturato e mirato con l'obiettivo di massimizzare le possibilità di successo degli strumenti negli esami d'ingresso e nell'affrontare i vari esami annuali. Questi corsi sono una risorsa preziosa per chi ha bisogno di un supporto aggiuntivo per entrare nel mondo accademico.",
     color: "from-purple-500 to-purple-600"
   },
   {
     id: "lingue-contabilita",
     icon: Languages,
     title: "Corsi di lingue e contabilità",
-    description: "Progettati per arricchire le competenze degli studenti, preparando quelli che intendono approfondire questa materia per motivi accademici e/o professionali. Lingue straniere: inglese, francese e spagnolo.",
+    description: "Progettati per arricchire le competenze degli studenti, preparando quelli che intendono approfondire questa materia per motivi accademici e/o professionali. Lingue straniere: inglese, francese e spagnolo",
     color: "from-emerald-500 to-emerald-600"
   },
   {
