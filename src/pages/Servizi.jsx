@@ -265,24 +265,24 @@ const courses = [
 
 const faqs = [
   {
-    question: "Come funzionano i corsi diurni e serali?",
-    answer: "I corsi diurni si svolgono dal lunedì al venerdì dalle 8:30 alle 12:10, mentre i corsi serali dalle 19:10 alle 22:40. Offriamo anche corsi personalizzati per chi ha esigenze specifiche di orario."
+    question: "Il diploma è riconosciuto dallo Stato?",
+    answer: "Sì, tutti i diplomi conseguiti grazie all'Istituto Garibaldi sono titoli di studio legalmente riconosciuti dal Ministero dell'Istruzione Italiano. Hanno lo stesso valore dei diplomi conseguiti nelle scuole statali e sono validi per l'accesso all'università, ai concorsi pubblici e al mondo del lavoro."
   },
   {
-    question: "È possibile recuperare più anni in uno?",
-    answer: "Sì, offriamo la possibilità di recuperare anni scolastici con percorsi abbreviati. Il passaggio di classe avviene entro il 15 marzo di ogni anno, permettendo di proseguire senza perdere tempo."
+    question: "E se ho lasciato la scuola molti anni fa?",
+    answer: "Non importa quanto tempo sia passato. Ogni anno accogliamo studenti che hanno interrotto gli studi da 5, 10, anche 20 anni. I nostri tutor sono esperti nel riattivare le competenze e costruire un percorso sostenibile che tenga conto della tua situazione attuale."
   },
   {
-    question: "Come avviene l'esame di diploma?",
-    answer: "Gli esami di stato si svolgono presso istituti paritari convenzionati. Il diploma rilasciato è pienamente riconosciuto dal MIUR e valido in Italia e nell'Unione Europea."
+    question: "Posso studiare mentre lavoro a tempo pieno?",
+    answer: "Assolutamente sì. Offriamo corsi serali appositamente pensati per chi lavora, con lezioni dalle 19:10 alle 22:40. Inoltre, è possibile concordare percorsi personalizzati che si adattino ai tuoi turni e impegni."
   },
   {
-    question: "Offrite supporto per studenti con DSA o BES?",
-    answer: "Sì, il doposcuola si rivolge anche a ragazzi con difficoltà, disturbi specifici dell'apprendimento (DSA) o Bisogni Educativi Speciali (BES), con metodologie personalizzate."
+    question: "Che supporto ricevo se faccio fatica?",
+    answer: "Le nostre classi sono volutamente piccole per garantire attenzione individuale. Ogni studente ha accesso a supporto didattico personalizzato, recupero delle lacune pregresse e tutoraggio continuo. Non sei mai lasciato solo."
   },
   {
-    question: "Quanto costano i corsi?",
-    answer: "I corsi partono da €1.650 (Promozione 2025/26). Il costo varia in base al tipo di corso e alle esigenze individuali. Contattaci per un preventivo personalizzato."
+    question: "Di quali documenti ho bisogno per iscrivermi?",
+    answer: "Generalmente servono: documento d'identità, codice fiscale, titolo di studio precedente (o autocertificazione), eventuali certificati di studi parziali. Durante il colloquio conoscitivo ti indicheremo esattamente cosa serve nel tuo caso specifico."
   }
 ];
 
