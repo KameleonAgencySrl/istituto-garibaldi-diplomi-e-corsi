@@ -168,8 +168,8 @@ export default function ServicesOverview() {
             </div>
             <div className="relative">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_698f5cc1774892bec8590553/3ae586b37_doposcuola_istituto-tecnico-garibaldi.jpg"
-                alt="Doposcuola"
+                src="https://media.base44.com/images/public/699f00212cf867d30a26b76b/903ae941d_generated_image.png"
+                alt="Servizi scolastici"
                 className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
               />
             </div>

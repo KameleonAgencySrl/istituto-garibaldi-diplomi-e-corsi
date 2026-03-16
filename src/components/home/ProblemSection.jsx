@@ -1,76 +1,110 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AlertCircle, Clock, Users, Target } from 'lucide-react';
-
-const problems = [
-  {
-    icon: Clock,
-    title: "Lavori e non hai tempo per frequentare?",
-    description: "I corsi tradizionali sono incompatibili con gli impegni lavorativi e familiari, rendendo difficile completare gli studi."
-  },
-  {
-    icon: Users,
-    title: "La scuola tradizionale non fa per te?",
-    description: "Classi numerose e metodi standardizzati non rispondono alle esigenze individuali di apprendimento."
-  },
-  {
-    icon: Target,
-    title: "Vuoi recuperare anni scolastici?",
-    description: "Hai interrotto gli studi e desideri riprendere senza perdere altro tempo prezioso."
-  },
-  {
-    icon: AlertCircle,
-    title: "Hai bisogno di supporto per DSA/BES?",
-    description: "Necessiti di un ambiente che comprenda e supporti le tue specifiche esigenze di apprendimento."
-  }
-];
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function ProblemSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Comprendiamo le tue difficoltà</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-3 mb-4">
-            Perché molti non completano gli studi
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+            Studiare di nuovo,
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Ogni anno migliaia di persone abbandonano il percorso scolastico per motivi pratici, non per mancanza di volontà.
-          </p>
+          <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">
+            alle tue condizioni.
+          </h3>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {problems.map((problem, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative bg-slate-50 hover:bg-white border border-slate-100 hover:border-slate-200 rounded-2xl p-6 lg:p-8 transition-all duration-300 hover:shadow-xl"
-            >
-              <div className="flex gap-5">
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] flex items-center justify-center shadow-lg shadow-blue-900/20 group-hover:scale-110 transition-transform">
-                    <problem.icon className="w-7 h-7 text-white" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                    {problem.title}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    {problem.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-slate-200"
+          >
+            <div className="border-l-4 border-[#1e3a5f] pl-6 mb-8">
+              <h4 className="text-xl font-semibold text-slate-900 mb-4">
+                I tuoi orari, non i nostri.
+              </h4>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Che tu lavori di giorno o abbia impegni familiari, i nostri corsi si adattano alla tua vita. Offriamo lezioni mattutine, pomeridiane e serali, oltre alla possibilità di costruire un percorso personalizzato insieme ai nostri tutor. Non sei tu a doverti adattare alla scuola — siamo noi ad adattarci a te.
+              </p>
+              <Link to={createPageUrl('Servizi')}>
+                <Button variant="link" className="text-[#1e3a5f] p-0 h-auto font-medium hover:no-underline group">
+                  Vedi gli orari e le sedi →
+                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Right Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-slate-200"
+          >
+            <div className="border-l-4 border-[#d4a853] pl-6 mb-8">
+              <h4 className="text-xl font-semibold text-slate-900 mb-4">
+                Un insegnante che conosce il tuo nome.
+              </h4>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Classi piccole, attenzione individuale, e docenti che seguono il tuo progresso personale. Non sei un numero in un registro.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom Cards */}
+        <div className="grid lg:grid-cols-2 gap-8 mt-8">
+          {/* 4 Locations Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200"
+          >
+            <h4 className="text-lg font-semibold text-slate-900 mb-3">4 SEDI</h4>
+            <p className="text-slate-700 font-medium mb-4">
+              Busto Arsizio · Novara · Legnano · Borgomanero
+            </p>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Segreteria disponibile dal Lunedì al Sabato
+            </p>
+          </motion.div>
+
+          {/* Diploma Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200"
+          >
+            <h4 className="text-lg font-semibold text-slate-900 mb-3">
+              Dal diploma di licenze media al diploma superiore.
+            </h4>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Qualunque sia il punto da cui riparti, abbiamo un percorso pensato per te — dalla terza media ai diplomi tecnici e liceali.
+            </p>
+            <Link to={createPageUrl('Servizi')}>
+              <Button variant="link" className="text-[#1e3a5f] p-0 h-auto font-medium hover:no-underline group">
+                Trova il tuo corso →
+                <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
