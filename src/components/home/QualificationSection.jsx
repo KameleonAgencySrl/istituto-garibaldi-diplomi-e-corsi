@@ -36,15 +36,15 @@ export default function QualificationSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="max-w-3xl mx-auto">
           {/* Ideal For */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 rounded-3xl p-8 border border-emerald-500/20"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-6 justify-center">
               <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center">
                 <Check className="w-5 h-5 text-white" />
               </div>
@@ -59,36 +59,6 @@ export default function QualificationSection() {
                 </li>
               ))}
             </ul>
-          </motion.div>
-
-          {/* Not For */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-red-500/10 to-red-500/5 rounded-3xl p-8 border border-red-500/20"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center">
-                <X className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white">Non adatto a</h3>
-            </div>
-            
-            <ul className="space-y-4">
-              {notFor.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-300">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 p-4 bg-slate-800/50 rounded-xl">
-              <p className="text-sm text-slate-400">
-                Se hai dubbi, contattaci per un colloquio conoscitivo gratuito. Ti aiuteremo a capire se siamo la scelta giusta.
-              </p>
-            </div>
           </motion.div>
         </div>
       </div>
