@@ -224,7 +224,7 @@ export default function ChiSiamo() {
               { city: "Busto Arsizio", province: "VA", address: "Via Ponchielli, 28", phone: "0331 679116" },
               { city: "Legnano", province: "MI", address: "Via Imperia, 21", phone: "0331 451210" },
               { city: "Novara", province: "NO", address: "Via Dell'Archivio, 9", phone: "0321 331820" },
-              { city: "Borgomanero", province: "NO", address: "Via Maggiate, 686", phone: "0322 211094" }
+              { city: "Borgomanero", province: "NO", address: "Via Maggiate, 69B", phone: "0322 211094" }
             ].map((loc, i) => (
               <motion.div
                 key={i}

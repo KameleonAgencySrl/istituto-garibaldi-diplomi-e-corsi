@@ -7,8 +7,8 @@ const locations = [
     src: "https://maps.google.com/maps?q=Via+Imperia+21+Legnano+MI&output=embed&z=15" },
   { city: "Novara", addr: "Via Dell'Archivio, 9", badge: "NO · Sede Operativa", num: "03",
     src: "https://maps.google.com/maps?q=Via+dell+Archivio+9+Novara&output=embed&z=15" },
-  { city: "Borgomanero", addr: "Via Maggiate, 686", badge: "NO · Sede Operativa", num: "04",
-    src: "https://maps.google.com/maps?q=Via+Maggiate+686+Borgomanero&output=embed&z=15" },
+  { city: "Borgomanero", addr: "Via Maggiate, 69B", badge: "NO · Sede Operativa", num: "04",
+    src: "https://maps.google.com/maps?q=Via+Maggiate+69B+Borgomanero&output=embed&z=15" },
 ];
 
 export default function LocationsMap() {
