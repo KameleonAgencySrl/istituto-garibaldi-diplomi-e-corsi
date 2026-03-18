@@ -26,6 +26,9 @@ export default function TrustSection() {
             viewport={{ once: true }}
           >
             <div className="elfsight-app-c3b4c00c-dd9f-4e1e-81cf-9e6698b0c1e6" data-elfsight-app-lazy></div>
+            <div className="mt-8">
+              <BorgomaneroReviews />
+            </div>
           </motion.div>
 
           {/* Certifications */}
