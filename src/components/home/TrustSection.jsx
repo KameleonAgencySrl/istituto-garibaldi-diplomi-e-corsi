@@ -88,6 +88,19 @@ export default function TrustSection() {
           </motion.div>
         </div>
       </div>
+
+      {/* Borgomanero Reviews - full width below */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-2xl border border-slate-100 p-6"
+        >
+          <p className="text-sm font-medium text-slate-500 mb-4 text-center uppercase tracking-wider">Recensioni — Borgomanero</p>
+          <BorgomaneroReviews />
+        </motion.div>
+      </div>
     </section>
   );
 }
