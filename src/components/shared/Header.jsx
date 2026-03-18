@@ -72,10 +72,6 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+390331679116" className="flex items-center gap-2 text-sm text-slate-600 hover:text-[#1e3a5f]">
-              <Phone className="w-4 h-4" />
-              0331 679116
-            </a>
             <Link to={createPageUrl('Contatti')}>
               <Button className="bg-[#1e3a5f] hover:bg-[#2d5a8f] text-white rounded-xl px-6">
                 Richiedi info

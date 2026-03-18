@@ -64,7 +64,7 @@ export default function TrustSection() {
                   <FileCheck className="w-7 h-7 text-amber-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 mb-1">Esami presso istituti paritari</h3>
+                  <h3 className="font-semibold text-slate-900 mb-1">Esami di stato con Esami di idoneità</h3>
                   <p className="text-slate-600 text-sm">Collaboriamo con scuole paritarie convenzionate per lo svolgimento degli esami di stato.</p>
                 </div>
               </div>
