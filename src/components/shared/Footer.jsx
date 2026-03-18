@@ -24,7 +24,7 @@ const locations = [
   },
   {
     city: "Borgomanero (NO)",
-    address: "Via Maggiate, 686",
+    address: "Via Maggiate, 69B",
     phone: "0322 211094",
     email: "borgomanero@istitutogaribaldi.com"
   }
