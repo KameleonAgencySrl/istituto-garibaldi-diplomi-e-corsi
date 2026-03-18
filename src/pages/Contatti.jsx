@@ -14,6 +14,7 @@ import {
 import { MapPin, Phone, Mail, Clock, CheckCircle, Send, MessageSquare } from 'lucide-react';
 import LocationsMap from '@/components/shared/LocationsMap';
 import BorgomaneroReviews from '@/components/shared/BorgomaneroReviews';
+import LegnanoReviews from '@/components/shared/LegnanoReviews';
 import { toast } from 'sonner';
 
 const locations = [
