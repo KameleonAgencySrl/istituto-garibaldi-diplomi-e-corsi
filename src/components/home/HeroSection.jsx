@@ -63,13 +63,13 @@ export default function HeroSection() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <p className="text-2xl font-bold text-slate-900">4</p>
-                <p className="text-sm text-slate-500">Sedi in Lombardia</p>
+                <p className="text-sm text-slate-500">Sedi in Nord Italia</p>
               </div>
               <div className="text-center sm:text-left">
                 <div className="flex items-center justify-center sm:justify-start gap-2 text-[#d4a853] mb-1">
                   <Award className="w-5 h-5" />
                 </div>
-                <p className="text-2xl font-bold text-slate-900">12+</p>
+                <p className="text-2xl font-bold text-slate-900">10</p>
                 <p className="text-sm text-slate-500">Indirizzi diploma</p>
               </div>
               <div className="text-center sm:text-left">
