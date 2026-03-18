@@ -92,7 +92,7 @@ export default function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-[#1e3a5f]/20 to-[#d4a853]/20 rounded-3xl blur-2xl" />
               <img
-                src="https://media.base44.com/images/public/699f00212cf867d30a26b76b/aa12a5b55_WhatsAppImage2026-03-18at83946PM.jpg"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_698f5cc1774892bec8590553/bb385eb8e_diploma_istituto-tecnico-garibaldi.jpg"
                 alt="Studenti laureati"
                 className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
               />
