@@ -419,6 +419,17 @@ export default function Contatti() {
           <LocationsMap />
         </div>
       </section>
+
+      {/* Borgomanero Google Reviews */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Recensioni</span>
+            <h2 className="text-2xl font-bold text-slate-900 mt-2">Cosa dicono di noi — Borgomanero</h2>
+          </div>
+          <BorgomaneroReviews />
+        </div>
+      </section>
     </main>
   );
 }
