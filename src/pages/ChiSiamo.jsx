@@ -204,32 +204,6 @@ export default function ChiSiamo() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Il nostro team</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-3 mb-4">
-              Professionisti dedicati
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Un team di docenti qualificati e personale amministrativo al tuo servizio.
-            </p>
-          </motion.div>
-
-          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-8 text-center">
-            <p className="text-amber-800">
-              <strong>CONTENT REQUIRED FROM CLIENT:</strong> Foto e informazioni sui membri del team (dirigenti, docenti principali) per personalizzare questa sezione.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Locations */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
