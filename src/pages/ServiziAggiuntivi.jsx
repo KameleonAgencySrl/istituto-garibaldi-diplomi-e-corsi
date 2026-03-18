@@ -55,18 +55,7 @@ export default function ServiziAggiuntivi() {
               Oltre ai corsi di diploma, offriamo servizi di supporto per ogni esigenza formativa, dalla preparazione universitaria al recupero personalizzato.
             </p>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mt-10 max-w-3xl mx-auto"
-          >
-            <img
-              src="https://media.base44.com/images/public/699f00212cf867d30a26b76b/aa12a5b55_WhatsAppImage2026-03-18at83946PM.jpg"
-              alt="Servizi scolastici"
-              className="rounded-2xl shadow-xl w-full object-cover aspect-[16/7]"
-            />
-          </motion.div>
+
         </div>
       </section>
 
