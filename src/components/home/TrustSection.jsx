@@ -4,13 +4,19 @@ import { Shield, Award, FileCheck } from 'lucide-react';
 
 export default function TrustSection() {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://elfsightcdn.com/platform.js';
-    script.async = true;
-    document.body.appendChild(script);
+    const elfsightScript = document.createElement('script');
+    elfsightScript.src = 'https://elfsightcdn.com/platform.js';
+    elfsightScript.async = true;
+    document.body.appendChild(elfsightScript);
+
+    const sociableScript = document.createElement('script');
+    sociableScript.src = 'https://widgets.sociablekit.com/google-reviews/widget.js';
+    sociableScript.defer = true;
+    document.body.appendChild(sociableScript);
 
     return () => {
-      document.body.removeChild(script);
+      document.body.removeChild(elfsightScript);
+      document.body.removeChild(sociableScript);
     };
   }, []);
 
@@ -23,8 +29,13 @@ export default function TrustSection() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="space-y-8"
           >
             <div className="elfsight-app-c3b4c00c-dd9f-4e1e-81cf-9e6698b0c1e6" data-elfsight-app-lazy></div>
+            <div>
+              <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Recensioni — Borgomanero</p>
+              <div className="sk-ww-google-reviews" data-embed-id="25664428"></div>
+            </div>
           </motion.div>
 
           {/* Certifications */}
