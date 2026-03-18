@@ -24,11 +24,6 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-amber-800">Promozione 2025/26 — A partire da €1.650</span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
               Il tuo diploma,
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1e3a5f] to-[#2d5a8f]">
