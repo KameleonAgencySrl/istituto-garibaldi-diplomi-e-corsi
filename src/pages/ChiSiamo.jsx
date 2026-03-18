@@ -59,8 +59,11 @@ export default function ChiSiamo() {
                 <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-3 mb-6">
                   Perché esistiamo
                 </h2>
+                <p className="text-lg text-slate-600 mb-4">
+                  Il nostro Istituto ha come obiettivo fondamentale il successo formativo di ogni studente. Crediamo in una scuola che riconosce e valorizza il potenziale e le caratteristiche di ciascuno, adattandosi ai diversi stili di apprendimento attraverso un'organizzazione didattica innovativa ed efficace.
+                </p>
                 <p className="text-lg text-slate-600 mb-8">
-                  L'Istituto Garibaldi si pone il fondamentale obiettivo scientifico di assicurare il successo formativo a tutti gli alunni. È un ambiente che consente a valorizzare la diversità, favorendo inoltre ricorso alla strategia organizzativa ed educativa più efficace, quali quella della flessibilità e della personalizzazione educativa, per una scuola di metodo di cultura.
+                  Offriamo un ambiente educativo inclusivo, basato sull'ascolto, sulla flessibilità e sulla personalizzazione dei percorsi, per accompagnare ogni studente nel proprio percorso di crescita, sia personale che culturale.
                 </p>
               </motion.div>
 
@@ -68,23 +71,23 @@ export default function ChiSiamo() {
                 {[
                   {
                     icon: Target,
-                    title: "Classi poco numerose",
-                    description: "Attenzione individuale per ogni studente"
+                    title: "Classi a numero ridotto",
+                    description: "Per favorire un'attenzione reale e costante verso ogni studente"
                   },
                   {
                     icon: Users,
                     title: "Docenti qualificati",
-                    description: "Rapporto costante Scuola-Famiglia"
+                    description: "Preparati e sempre disponibili al dialogo con studenti e famiglie"
                   },
                   {
                     icon: BookOpen,
                     title: "Percorsi personalizzati",
-                    description: "Adattati alle esigenze dello studente"
+                    description: "Percorsi didattici costruiti sulle esigenze individuali"
                   },
                   {
                     icon: Heart,
                     title: "Ambiente sereno",
-                    description: "Flessibilità negli orari scolastici"
+                    description: "Clima scolastico positivo, che favorisce l'apprendimento e il benessere"
                   }
                 ].map((item, i) => (
                   <motion.div
@@ -125,15 +128,19 @@ export default function ChiSiamo() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 bg-[#d4a853] rounded-full mt-2" />
-                    <span>Istruzione per gli studenti, serenità dei ragazzi e tranquillità per i genitori</span>
+                    <span>Centralità dello studente e attenzione alla sua crescita personale e culturale</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 bg-[#d4a853] rounded-full mt-2" />
-                    <span>Colloquio sul raggiungimento ottimale/massimo del singolo studente</span>
+                    <span>Collaborazione costante tra docenti, studenti e famiglie</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 bg-[#d4a853] rounded-full mt-2" />
-                    <span>Attenzione alle esigenze individuali e supporto personalizzato</span>
+                    <span>Inclusività e valorizzazione delle diversità individuali</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-[#d4a853] rounded-full mt-2" />
+                    <span>Flessibilità e personalizzazione dei percorsi didattici</span>
                   </li>
                 </ul>
               </div>
