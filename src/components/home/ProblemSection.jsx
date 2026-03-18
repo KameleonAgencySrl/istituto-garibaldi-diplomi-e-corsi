@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 
 export default function ProblemSection() {
@@ -34,9 +36,9 @@ export default function ProblemSection() {
             <p className="text-sm text-slate-700 leading-relaxed mb-4">
               Che tu lavori di giorno o abbia impegni familiari, i nostri corsi si adattano alla tua vita. Offriamo lezioni mattutine, pomeridiane e serali, oltre alla possibilità di costruire un percorso personalizzato insieme ai nostri tutor. Non sei tu a doverti adattare alla scuola — siamo noi ad adattarci a te.
             </p>
-            <p className="text-sm text-slate-900">
+            <Link to={createPageUrl('Contatti')} className="text-sm text-slate-900 hover:underline">
               Vedi gli orari e le sedi →
-            </p>
+            </Link>
           </motion.div>
 
           {/* Right Card */}
@@ -90,9 +92,9 @@ export default function ProblemSection() {
             <p className="text-sm text-slate-700 leading-relaxed mb-3">
               Qualunque sia il punto da cui riparti, abbiamo un percorso pensato per te — dalla terza media ai diplomi tecnici e liceali.
             </p>
-            <p className="text-sm text-slate-900">
+            <Link to={createPageUrl('Servizi')} className="text-sm text-slate-900 hover:underline">
               Trova il tuo corso →
-            </p>
+            </Link>
           </motion.div>
         </div>
       </div>
