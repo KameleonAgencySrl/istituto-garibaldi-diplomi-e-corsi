@@ -31,19 +31,24 @@ export default function TrustSection() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="elfsight-app-c3b4c00c-dd9f-4e1e-81cf-9e6698b0c1e6" data-elfsight-app-lazy></div>
             <div>
-              <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Recensioni — Borgomanero</p>
-              <div className="sk-ww-google-reviews" data-embed-id="25664428"></div>
+              <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Recensioni — Busto Arsizio</p>
+              <div className="elfsight-app-c3b4c00c-dd9f-4e1e-81cf-9e6698b0c1e6" data-elfsight-app-lazy></div>
             </div>
           </motion.div>
 
-          {/* Certifications */}
+          {/* Certifications + Borgomanero Reviews */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="space-y-8"
           >
+            <div>
+              <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Recensioni — Borgomanero</p>
+              <div className="sk-ww-google-reviews" data-embed-id="25664428"></div>
+            </div>
+
             <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Garanzie e riconoscimenti</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-3 mb-8">
               Affidabilità certificata
