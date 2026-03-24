@@ -286,7 +286,7 @@ export default function ChiSiamo() {
               {
                 icon: Users,
                 title: "Istituti paritari convenzionati",
-                description: "Collaboriamo con scuole paritarie riconosciute per lo svolgimento degli esami di stato."
+                description: "Collaboriamo con scuole paritarie riconosciute per lo svolgimento degli esami di idoneità."
               }
             ].map((item, i) => (
               <motion.div
