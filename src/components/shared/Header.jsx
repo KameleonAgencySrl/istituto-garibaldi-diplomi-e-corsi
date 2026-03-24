@@ -11,6 +11,7 @@ const navItems = [
   { name: 'Servizi Aggiuntivi', page: 'ServiziAggiuntivi' },
   { name: 'Realizzazioni', page: 'Realizzazioni' },
   { name: 'Chi Siamo', page: 'ChiSiamo' },
+  { name: 'Lavora con Noi', page: 'LavoraConNoi' },
   { name: 'Contatti', page: 'Contatti' },
 ];
 

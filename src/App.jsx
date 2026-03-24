@@ -7,6 +7,7 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ServiziAggiuntivi from './pages/ServiziAggiuntivi';
+import LavoraConNoi from './pages/LavoraConNoi';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const { Pages, Layout, mainPage } = pagesConfig;
@@ -64,6 +65,14 @@ const AuthenticatedApp = () => {
         element={
           <LayoutWrapper currentPageName="ServiziAggiuntivi">
             <ServiziAggiuntivi />
+          </LayoutWrapper>
+        } 
+      />
+      <Route 
+        path="/LavoraConNoi" 
+        element={
+          <LayoutWrapper currentPageName="LavoraConNoi">
+            <LavoraConNoi />
           </LayoutWrapper>
         } 
       />
