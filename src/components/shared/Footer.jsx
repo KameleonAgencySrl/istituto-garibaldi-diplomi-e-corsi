@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 
 const locations = [
   {
@@ -57,9 +57,17 @@ export default function Footer() {
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Da oltre 35 anni, una grande famiglia al servizio del singolo. Corsi per il conseguimento del diploma con formazione personalizzata e flessibile.
             </p>
-            <div className="flex items-center gap-2 text-sm text-slate-400">
+            <div className="flex items-center gap-2 text-sm text-slate-400 mb-6">
               <Clock className="w-4 h-4" />
               <span>Lun-Ven: 8:30-12:10 / 19:10-22:40</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <a href="https://www.facebook.com/IstitutoTecnicoGaribaldi" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877F2] flex items-center justify-center transition-colors">
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a href="https://www.instagram.com/istitutotecnicog.garibaldi/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#E1306C] flex items-center justify-center transition-colors">
+                <Instagram className="w-4 h-4" />
+              </a>
             </div>
           </div>
 

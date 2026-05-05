@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -73,6 +73,12 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
+            <a href="https://www.facebook.com/IstitutoTecnicoGaribaldi" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-slate-500 hover:text-[#1877F2] hover:bg-slate-100 transition-colors">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a href="https://www.instagram.com/istitutotecnicog.garibaldi/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-slate-500 hover:text-[#E1306C] hover:bg-slate-100 transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
             <Link to={createPageUrl('Contatti')}>
               <Button className="bg-[#1e3a5f] hover:bg-[#2d5a8f] text-white rounded-xl px-6">
                 Richiedi info
