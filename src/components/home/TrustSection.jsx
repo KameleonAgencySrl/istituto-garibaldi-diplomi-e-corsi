@@ -3,35 +3,29 @@ import { motion } from 'framer-motion';
 import { Shield, Award, FileCheck } from 'lucide-react';
 import BorgomaneroReviews from '@/components/shared/BorgomaneroReviews';
 
-export default function TrustSection() {
+function SociableKitReviews() {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://elfsightcdn.com/platform.js';
-    script.async = true;
+    script.src = 'https://widgets.sociablekit.com/google-reviews/widget.js';
+    script.defer = true;
     document.body.appendChild(script);
-
     return () => {
       document.body.removeChild(script);
     };
   }, []);
 
+  return <div className="sk-ww-google-reviews" data-embed-id="25680695"></div>;
+}
+
+export default function TrustSection() {
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Google Reviews Widget */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="elfsight-app-c3b4c00c-dd9f-4e1e-81cf-9e6698b0c1e6" data-elfsight-app-lazy></div>
-          </motion.div>
-
+        <div className="flex flex-col gap-12 lg:gap-16">
           {/* Certifications */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Garanzie e riconoscimenti</span>
@@ -89,16 +83,16 @@ export default function TrustSection() {
         </div>
       </div>
 
-      {/* Borgomanero Reviews - full width below */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      {/* Google Reviews Widget */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="bg-white rounded-2xl border border-slate-100 p-6"
         >
-          <p className="text-sm font-medium text-slate-500 mb-4 text-center uppercase tracking-wider">Recensioni — Borgomanero</p>
-          <BorgomaneroReviews />
+          <p className="text-sm font-medium text-slate-500 mb-4 text-center uppercase tracking-wider">Recensioni Google</p>
+          <SociableKitReviews />
         </motion.div>
       </div>
     </section>
