@@ -5,9 +5,14 @@ import BorgomaneroReviews from '@/components/shared/BorgomaneroReviews';
 
 export default function TrustSection() {
   useEffect(() => {
+    // Remove any previously added trustmary script to avoid duplicates
+    const existing = document.querySelector('script[src="https://widget.trustmary.com/TH6h_JuC9"]');
+    if (existing) existing.remove();
+
     const script = document.createElement('script');
     script.src = 'https://widget.trustmary.com/TH6h_JuC9';
     script.async = true;
+    script.defer = true;
     document.body.appendChild(script);
 
     return () => {
@@ -28,7 +33,7 @@ export default function TrustSection() {
             viewport={{ once: true }}
             className="w-full"
           >
-            <div id="trustmary-widget-TH6h_JuC9" className="w-full"></div>
+            <div data-trustmary-widget="TH6h_JuC9" className="w-full"></div>
           </motion.div>
 
           {/* Certifications */}
