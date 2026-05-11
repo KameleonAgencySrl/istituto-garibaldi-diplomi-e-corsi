@@ -6,26 +6,29 @@ import BorgomaneroReviews from '@/components/shared/BorgomaneroReviews';
 export default function TrustSection() {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://elfsightcdn.com/platform.js';
+    script.src = 'https://widget.trustmary.com/TH6h_JuC9';
     script.async = true;
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Google Reviews Widget */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Trustmary Reviews Widget */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="w-full"
           >
-            <div className="elfsight-app-c3b4c00c-dd9f-4e1e-81cf-9e6698b0c1e6" data-elfsight-app-lazy></div>
+            <div id="trustmary-widget-TH6h_JuC9" className="w-full"></div>
           </motion.div>
 
           {/* Certifications */}

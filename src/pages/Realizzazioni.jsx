@@ -96,7 +96,7 @@ export default function Realizzazioni() {
               { value: "35+", label: "Anni di attività" },
               { value: "1000+", label: "Diplomati" },
               { value: "4", label: "Sedi operative" },
-              { value: "12+", label: "Indirizzi di studio" }
+              { value: "10", label: "Indirizzi di studio" }
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <p className="text-3xl sm:text-4xl font-bold text-[#d4a853]">{stat.value}</p>
