@@ -14,6 +14,16 @@
       gtag('js', new Date());
       gtag('config', 'AW-18109544254');
     </script>
+    <script>
+      // Intercept SDK unhandled rejections (plain objects with status codes, no stack)
+      // before the vite error handler tries to call .match on undefined message
+      window.addEventListener('unhandledrejection', function(event) {
+        var r = event.reason;
+        if (r && typeof r === 'object' && typeof r.status === 'number' && !r.stack) {
+          event.preventDefault();
+        }
+      }, true);
+    </script>
   </head>
   <body>
     <div id="root"></div>
