@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import { motion } from 'framer-motion';
 import { MessageSquare, ClipboardCheck, BookOpen, Award } from 'lucide-react';
 

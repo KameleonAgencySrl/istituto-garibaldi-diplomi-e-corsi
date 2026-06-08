@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+'use client';
+import { useState } from 'react';
 
 const locations = [
   { city: "Busto Arsizio", addr: "Via Ponchielli, 28", badge: "VA · Sede Legale", num: "01",

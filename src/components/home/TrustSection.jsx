@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+'use client';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Award, FileCheck } from 'lucide-react';
 import BorgomaneroReviews from '@/components/shared/BorgomaneroReviews';

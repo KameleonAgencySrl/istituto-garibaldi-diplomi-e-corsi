@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
+'use client';
+import Link from 'next/link';
 import { ArrowRight, Award, Users, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -36,13 +35,13 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Link to={createPageUrl('Contatti')}>
+              <Link href="/contatti">
                 <Button size="lg" className="bg-[#1e3a5f] hover:bg-[#2d5a8f] text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-blue-900/20 w-full sm:w-auto">
                   Richiedi informazioni
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link to={createPageUrl('Servizi')}>
+              <Link href="/servizi">
                 <Button size="lg" variant="outline" className="border-2 border-slate-300 hover:border-[#1e3a5f] hover:bg-slate-50 px-8 py-6 text-lg rounded-xl w-full sm:w-auto">
                   Scopri i corsi
                 </Button>

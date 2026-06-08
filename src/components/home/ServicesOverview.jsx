@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
+'use client';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, GraduationCap, BookOpen, Languages, Calculator, Wrench, Heart, Building2, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -91,7 +90,7 @@ export default function ServicesOverview() {
               Percorsi completi e riconosciuti dal MIUR, con la flessibilità di orari diurni, serali e personalizzati.
             </p>
           </div>
-          <Link to={createPageUrl('Servizi')}>
+          <Link href="/servizi">
             <Button variant="outline" className="border-2 border-[#1e3a5f] text-[#1e3a5f] hover:bg-[#1e3a5f] hover:text-white rounded-xl px-6">
               Vedi tutti i corsi
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -161,7 +160,7 @@ export default function ServicesOverview() {
                 ].map((item, i) => (
                   <Link 
                     key={i} 
-                    to={createPageUrl('ServiziAggiuntivi')}
+                    href="/servizi-aggiuntivi"
                     className="group"
                   >
                     <div className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40 rounded-xl p-4 transition-all duration-300 h-full">

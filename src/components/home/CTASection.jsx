@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
+'use client';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -30,7 +29,7 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link to={createPageUrl('Contatti')}>
+            <Link href="/contatti">
               <Button size="lg" className="bg-[#d4a853] hover:bg-[#c49743] text-slate-900 px-10 py-7 text-lg rounded-xl shadow-xl w-full sm:w-auto font-semibold">
                 Richiedi informazioni
                 <ArrowRight className="ml-2 w-5 h-5" />
