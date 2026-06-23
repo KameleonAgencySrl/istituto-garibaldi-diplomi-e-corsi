@@ -60,5 +60,5 @@ export default function RootLayout({ children }) {
         <Toaster />
       </body>
     </html>
-  );
+  ); // Minor change: added comment for tracking
 }
