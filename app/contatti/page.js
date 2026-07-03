@@ -33,10 +33,20 @@ export default function ContattiPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast.success('Richiesta inviata con successo! Ti contatteremo presto.');
+    try {
+      const res = await fetch('/api/contatti', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error();
+      setIsSubmitted(true);
+      toast.success('Richiesta inviata con successo! Ti contatteremo presto.');
+    } catch {
+      toast.error('Si è verificato un errore. Riprova o chiamaci direttamente.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

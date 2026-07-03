@@ -12,6 +12,7 @@ import { toast } from 'sonner';
 export default function LavoraConNoiPage() {
   const [tipo, setTipo] = useState('Impiegato/a');
   const [formData, setFormData] = useState({ cognomeNome: '', email: '', telefono: '', residenza: '', titoloDiStudio: '', esperienze: '', messaggio: '' });
+  const [cv, setCv] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -20,10 +21,21 @@ export default function LavoraConNoiPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast.success('Candidatura inviata con successo! Ti contatteremo presto.');
+    try {
+      const body = new FormData();
+      body.append('tipo', tipo);
+      Object.entries(formData).forEach(([key, value]) => body.append(key, value));
+      if (cv) body.append('cv', cv);
+
+      const res = await fetch('/api/lavora-con-noi', { method: 'POST', body });
+      if (!res.ok) throw new Error();
+      setIsSubmitted(true);
+      toast.success('Candidatura inviata con successo! Ti contatteremo presto.');
+    } catch {
+      toast.error('Si è verificato un errore. Riprova o chiamaci direttamente.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -79,7 +91,7 @@ export default function LavoraConNoiPage() {
               <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6"><CheckCircle className="w-8 h-8 text-emerald-600" /></div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Candidatura inviata!</h3>
               <p className="text-slate-600 mb-6">Grazie per il tuo interesse. Valuteremo il tuo profilo e ti contatteremo al più presto.</p>
-              <Button variant="outline" onClick={() => { setIsSubmitted(false); setFormData({ cognomeNome: '', email: '', telefono: '', residenza: '', titoloDiStudio: '', esperienze: '', messaggio: '' }); setTipo('Impiegato/a'); }}>Invia un&apos;altra candidatura</Button>
+              <Button variant="outline" onClick={() => { setIsSubmitted(false); setFormData({ cognomeNome: '', email: '', telefono: '', residenza: '', titoloDiStudio: '', esperienze: '', messaggio: '' }); setTipo('Impiegato/a'); setCv(null); }}>Invia un&apos;altra candidatura</Button>
             </div>
           ) : (
             <div className="bg-slate-50 rounded-2xl p-8 lg:p-10">
@@ -106,7 +118,7 @@ export default function LavoraConNoiPage() {
                 <div className="space-y-2"><Label htmlFor="messaggio">Lettera di presentazione / Motivazione</Label><Textarea id="messaggio" name="messaggio" value={formData.messaggio} onChange={handleChange} placeholder="Raccontaci perché vuoi lavorare con noi..." rows={4} className="bg-white" /></div>
                 <div className="space-y-2">
                   <Label htmlFor="cv">Allega il tuo CV (PDF)</Label>
-                  <input id="cv" type="file" accept=".pdf,.doc,.docx" className="block w-full text-sm text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-[#1e3a5f]/10 file:text-[#1e3a5f] hover:file:bg-[#1e3a5f]/20 cursor-pointer" />
+                  <input id="cv" type="file" accept=".pdf,.doc,.docx" onChange={(e) => setCv(e.target.files?.[0] ?? null)} className="block w-full text-sm text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-[#1e3a5f]/10 file:text-[#1e3a5f] hover:file:bg-[#1e3a5f]/20 cursor-pointer" />
                 </div>
                 <div className="flex items-start gap-3"><input type="checkbox" required className="mt-1" id="privacy" /><label htmlFor="privacy" className="text-sm text-slate-600">Acconsento al trattamento dei dati personali secondo la <a href="#" className="text-[#1e3a5f] underline">Privacy Policy</a>. <span className="text-red-500">*</span></label></div>
                 <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-[#1e3a5f] hover:bg-[#2d5a8f] text-white py-6 rounded-xl text-lg">
