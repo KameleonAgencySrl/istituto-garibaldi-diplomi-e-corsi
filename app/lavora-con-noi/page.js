@@ -6,7 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Send, CheckCircle, Briefcase, GraduationCap, Users } from 'lucide-react';
+import { Send, CheckCircle, Briefcase, GraduationCap, Users, MapPin, Clock, FileText } from 'lucide-react';
+
+const POSIZIONE_SPAGNOLO = 'Insegnante di Spagnolo – Borgomanero';
 import { toast } from 'sonner';
 
 export default function LavoraConNoiPage() {
@@ -79,7 +81,29 @@ export default function LavoraConNoiPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Posizioni aperte</span>
+            <h2 className="text-3xl font-bold text-slate-900 mt-2">Stiamo cercando</h2>
+          </div>
+          <div className="rounded-2xl border border-slate-200 p-6 lg:p-8 shadow-sm">
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Insegnante di Spagnolo – Sede di Borgomanero</h3>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600 mb-4">
+              <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-[#1e3a5f]" />Via Maggiate 69B, Borgomanero (NO)</span>
+              <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-[#1e3a5f]" />Martedì e venerdì, 10:40–13:40</span>
+              <span className="flex items-center gap-2"><FileText className="w-4 h-4 text-[#1e3a5f]" />Tempo determinato</span>
+            </div>
+            <p className="text-slate-600 mb-3">Lezioni di lingua spagnola in presenza per gli studenti dei nostri corsi di diploma, in classi ridotte e con attenzione al singolo studente.</p>
+            <p className="text-slate-600 mb-6"><span className="font-semibold text-slate-900">Requisiti:</span> laurea in lingue oppure madrelingua spagnolo con esperienza di insegnamento, buona conoscenza dell&apos;italiano.</p>
+            <Button asChild className="bg-[#1e3a5f] hover:bg-[#2d5a8f] text-white rounded-xl">
+              <a href="#candidatura" onClick={() => setTipo(POSIZIONE_SPAGNOLO)}>Candidati ora</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="candidatura" className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Invia la tua candidatura</h2>
@@ -98,8 +122,8 @@ export default function LavoraConNoiPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <p className="text-sm font-semibold text-slate-900 mb-3">Le figure professionali che cerchiamo sono: <span className="text-red-500">*</span></p>
-                  <div className="flex gap-6">
-                    {['Impiegato/a', 'Personale qualificato nel settore'].map((opt) => (
+                  <div className="flex flex-wrap gap-x-6 gap-y-3">
+                    {[POSIZIONE_SPAGNOLO, 'Impiegato/a', 'Personale qualificato nel settore'].map((opt) => (
                       <label key={opt} className="flex items-center gap-2 cursor-pointer">
                         <input type="radio" name="tipo" value={opt} checked={tipo === opt} onChange={() => setTipo(opt)} className="accent-[#1e3a5f]" />
                         <span className="text-sm text-slate-700">{opt}</span>
