@@ -42,13 +42,18 @@ export default function LavoraConNoiPage() {
 
   return (
     <main>
-      <section className="pt-12 pb-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
+      <section className="relative min-h-[420px] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1600&q=80" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#1e3a5f]/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/60 to-transparent" />
+        </div>
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-2xl mx-auto">
             <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Istituto Tecnico Garibaldi</span>
-            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mt-3 mb-6">Lavora con noi</h1>
-            <p className="text-xl text-slate-600 mb-8">Entra a far parte del nostro team. Cerchiamo persone appassionate di istruzione e formazione per le nostre sedi nel Nord Italia.</p>
-            <a href="#posizioni" className="inline-flex items-center gap-2 rounded-full bg-[#1e3a5f] px-6 py-3 text-sm font-semibold text-white hover:bg-[#2d4a6f] transition-colors">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">Lavora con noi</h1>
+            <p className="text-lg md:text-xl text-white/90 mb-8">Entra a far parte del nostro team. Cerchiamo persone appassionate di istruzione e formazione per le nostre sedi nel Nord Italia.</p>
+            <a href="#posizioni" className="inline-flex items-center gap-2 rounded-full border border-[#d4a853] px-6 py-3 text-sm font-semibold text-[#d4a853] hover:bg-[#d4a853] hover:text-[#1e3a5f] transition-colors">
               <Briefcase className="w-4 h-4" /> Vedi le posizioni aperte
             </a>
           </motion.div>
