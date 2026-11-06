@@ -42,18 +42,15 @@ export default function LavoraConNoiPage() {
 
   return (
     <main>
-      <section className="relative min-h-[420px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1600&q=80" alt="Lavora con noi" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a5f]/85 via-[#1e3a5f]/60 to-transparent" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-lg">
-            <div className="inline-block bg-[#1e3a5f] border border-white/20 rounded-xl px-6 py-5 mb-6">
-              <p className="text-white/70 text-sm font-medium mb-1">Istituto Tecnico Garibaldi</p>
-              <h1 className="text-2xl font-bold text-white tracking-wide uppercase">Lavora con Noi</h1>
-            </div>
-            <p className="text-white/90 text-lg leading-relaxed">Entra a far parte del nostro team. Cerchiamo persone appassionate di istruzione e formazione per le nostre sedi nel Nord Italia.</p>
+      <section className="pt-12 pb-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
+            <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Istituto Tecnico Garibaldi</span>
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mt-3 mb-6">Lavora con noi</h1>
+            <p className="text-xl text-slate-600 mb-8">Entra a far parte del nostro team. Cerchiamo persone appassionate di istruzione e formazione per le nostre sedi nel Nord Italia.</p>
+            <a href="#posizioni" className="inline-flex items-center gap-2 rounded-full bg-[#1e3a5f] px-6 py-3 text-sm font-semibold text-white hover:bg-[#2d4a6f] transition-colors">
+              <Briefcase className="w-4 h-4" /> Vedi le posizioni aperte
+            </a>
           </motion.div>
         </div>
       </section>
@@ -81,7 +78,7 @@ export default function LavoraConNoiPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section id="posizioni" className="py-16 bg-white scroll-mt-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="text-[#d4a853] font-medium text-sm tracking-wider uppercase">Posizioni aperte</span>
